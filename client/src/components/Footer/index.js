@@ -16,7 +16,7 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
+         Please come again! {' '}
           <span
             className="emoji"
             role="img"
@@ -24,8 +24,9 @@ const Footer = () => {
             aria-hidden="false"
           >
             ❤️
-          </span>{' '}
-          by Author.
+          </span>
+          {/* {' '}
+          by Author. */}
         </h4>
       </div>
     </footer>
