@@ -5,14 +5,20 @@ import {
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
+
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Shape from './pages/Shape';
+import Acrylic from "./pages/Acrylic";
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,14 +51,31 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
+            <div>
+              <Link to="/shape">Shape</Link>
+              <Link to="/acrylic">Acrylic</Link>
+            </div>
+            {/* this is the home page */}
             <Route exact path="/">
               <Home />
             </Route>
+            {/* this is the login page */}
             <Route exact path="/login">
               <Login />
             </Route>
+            {/* this is the sign up page */}
             <Route exact path="/signup">
               <Signup />
+            </Route>
+            {/* this is the shape page */}
+
+            <Route exact path="/shape">
+              <Shape />
+            </Route>
+
+            {/* this is the acrylic page */}
+            <Route exact path="/acrylic">
+              <Acrylic />
             </Route>
           </div>
           <Footer />

@@ -5,7 +5,8 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-center">
-      </div>
+        <h1>Welcome to Long or Short Nails</h1>
+             </div>
     </main>
   );
 };
